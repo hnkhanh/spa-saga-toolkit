@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { connect, useDispatch } from 'react-redux';
-import { Redirect, Route, Switch, withRouter } from 'react-router-dom';
+import { Redirect, Route, Switch, useParams, withRouter } from 'react-router-dom';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import { getComments } from '../redux/reducers/comments';
 import { getDishes } from '../redux/reducers/dishes';
@@ -66,15 +66,15 @@ const Main = (props) => {
     );
   }
 
-  const DishWithId = ({match}) => {
+  const DishWithId = () => {
+    const { dishId } = useParams();
     return(
       <DishDetail 
-        dish={dishes.dishes.filter((dish) => dish.id === parseInt(match.params.dishId,10))[0]} 
+        dish={dishes.dishes.filter((dish) => dish.id === parseInt(dishId,10))[0]} 
         isLoading={dishes.isLoading}
         errMess={dishes.errMess}
-        comments={comments.comments.filter((comment) => comment.dishId === parseInt(match.params.dishId,10))}
+        comments={comments.comments.filter((comment) => comment.dishId === parseInt(dishId,10))}
         commentsErrMess = {comments.errMess}
-        // postComment={postComment}
       />
     );
   };

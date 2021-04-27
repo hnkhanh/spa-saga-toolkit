@@ -21,7 +21,6 @@ export const deleteRequest = async (endpoint, deleteItemId) => {
 
 export const patchRequest = async (endpoint, updatingItemId, updatingItem) => {
   const res = await axios.patch(baseUrl + endpoint + `/${updatingItemId}`, updatingItem)
-  console.log(res)
   return res
 }
 

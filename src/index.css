@@ -103,6 +103,9 @@ button.comment {
 button.comment:hover {
   background-color: #6386d6;
 }
+.update-comment {
+  display: inline-block;
+}
 .author {
   text-align: center;
   color: black;

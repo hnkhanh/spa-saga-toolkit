@@ -9,9 +9,12 @@ import { FadeTransform } from 'react-animation-components';
 import { useDispatch } from 'react-redux';
 import { addComment, deleteComment, updateComment } from '../redux/reducers/comments'
 
-const CommentForm = ({ dishId, toggleModal, isModalOpen }) => {
+const CommentForm = ({ dishId }) => {
   const dispatch = useDispatch();
-
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const toggleModal = () => {
+    setIsModalOpen(!isModalOpen);
+  };
   const handleSubmit = (values) => {
     const {rating, author, comment} = values
     dispatch(addComment({ dishId, rating, author, comment, 
@@ -49,7 +52,8 @@ const UpdateCommentForm = ({comment}) => {
   }
 
   return(
-    <div className="col-6">
+    <div style={{display: 'inline-block' }}
+    className="ml-3">
      
       <UpdateFormModal 
       comment = {comment}
@@ -253,6 +257,8 @@ const RenderComments = ({comments, errMess}) => {
             </Button>
             <UpdateCommentForm 
               comment = {comment}
+              className= "update-comment"
+              // className="mt-3 mb-3 comment"
             />
             
           </div>
@@ -294,15 +300,12 @@ const DishDetail = ({ dish, comments, isLoading, commentsErrMess, errMess }) => 
   const indexOfLastComment = currentPage * commentsPerPage;
   const indexOfFirstComment = indexOfLastComment - commentsPerPage;
   const currentComments = comments.slice(indexOfFirstComment, indexOfLastComment);
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const toggleModal = () => {
-    setIsModalOpen(!isModalOpen);
-  };
+  
   
   const onPageChange = (e) => {
     setCurrentPage(Number(e.target.id))
     }
-
+console.log("rerender")
   if (isLoading) {
     return(
       <div className="container">
@@ -322,13 +325,14 @@ const DishDetail = ({ dish, comments, isLoading, commentsErrMess, errMess }) => 
     );
   }
   else if (dish != null) {
+    console.log("inside rerender")
     return(
       <div className="container">
         <div className="row">
           <Breadcrumb>
             <BreadcrumbItem><Link to="/menu">Menu</Link></BreadcrumbItem>
             <BreadcrumbItem active>{dish.name}</BreadcrumbItem>
-        </Breadcrumb>
+          </Breadcrumb>
         <div className="col-12">
             <h3>{dish.name}</h3>
             <hr />
@@ -352,8 +356,6 @@ const DishDetail = ({ dish, comments, isLoading, commentsErrMess, errMess }) => 
               />}
               {<CommentForm 
                 dishId={dish.id} 
-                isModalOpen = {isModalOpen}
-                toggleModal = {toggleModal}
                 />
               }
           </div>
