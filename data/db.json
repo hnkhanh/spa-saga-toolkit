@@ -1,0 +1,329 @@
+{
+  "dishes": [
+    {
+      "id": 0,
+      "name": "Uthappizza",
+      "image": "https://www.jessicagavin.com/wp-content/uploads/2020/07/hawaiian-pizza-16-1200.jpg",
+      "category": "mains",
+      "label": "Hot",
+      "price": "4.99",
+      "featured": true,
+      "description": "A unique combination of Indian Uthappam (pancake) and Italian pizza, topped with Cerignola olives, ripe vine cherry tomatoes, Vidalia onion, Guntur chillies and Buffalo Paneer."
+    },
+    {
+      "id": 1,
+      "name": "Zucchipakoda",
+      "image": "https://cdn.shopify.com/s/files/1/0090/0320/4704/products/image019_1200x1200.jpg?v=1562067975",
+      "category": "appetizer",
+      "label": "",
+      "price": "1.99",
+      "featured": false,
+      "description": "Deep fried Zucchini coated with mildly spiced Chickpea flour batter accompanied with a sweet-tangy tamarind sauce"
+    },
+    {
+      "id": 2,
+      "name": "Vadonut",
+      "image": "https://img.buzzfeed.com/video-api-prod/assets/31b90eeee94246ed81ae374ae37e2e51/BFV8279_DoughnutChips-ThumbFB.jpg",
+      "category": "appetizer",
+      "label": "New",
+      "price": "1.99",
+      "featured": false,
+      "description": "A quintessential ConFusion experience, is it a vada or is it a donut?"
+    },
+    {
+      "id": 3,
+      "name": "ElaiCheese Cake",
+      "image": "https://tmbidigitalassetsazure.blob.core.windows.net/rms3-prod/attachments/37/1200x1200/Triple-Berry-No-Bake-Cheesecake_EXPS_TOHcom19_138951_B01_30_6b.jpg",
+      "category": "dessert",
+      "label": "",
+      "price": "2.99",
+      "featured": false,
+      "description": "A delectable, semi-sweet New York Style Cheese Cake, with Graham cracker crust and spiced with Indian cardamoms"
+    }
+  ],
+  "comments": [
+    {
+      "id": 5,
+      "dishId": 1,
+      "rating": 5,
+      "comment": "Imagine all the eatables, living in conFusion!",
+      "author": "John Lemon",
+      "date": "2012-10-16T17:57:28.556094Z"
+    },
+    {
+      "id": 6,
+      "dishId": 1,
+      "rating": 4,
+      "comment": "Sends anyone to heaven, I wish I could get my mother-in-law to eat it!",
+      "author": "Paul McVites",
+      "date": "2014-09-05T17:57:28.556094Z"
+    },
+    {
+      "id": 7,
+      "dishId": 1,
+      "rating": 3,
+      "comment": "Eat it, just eat it!",
+      "author": "Michael Jaikishan",
+      "date": "2015-02-13T17:57:28.556094Z"
+    },
+    {
+      "id": 8,
+      "dishId": 1,
+      "rating": 4,
+      "comment": "Ultimate, Reaching for the stars!",
+      "author": "Ringo Starry",
+      "date": "2013-12-02T17:57:28.556094Z"
+    },
+    {
+      "id": 9,
+      "dishId": 1,
+      "rating": 2,
+      "comment": "It's your birthday, we're gonna party!",
+      "author": "25 Cent",
+      "date": "2011-12-02T17:57:28.556094Z"
+    },
+    {
+      "id": 10,
+      "dishId": 2,
+      "rating": 5,
+      "comment": "Imagine all the eatables, living in conFusion!",
+      "author": "John Lemon",
+      "date": "2012-10-16T17:57:28.556094Z"
+    },
+    {
+      "id": 11,
+      "dishId": 2,
+      "rating": 4,
+      "comment": "Sends anyone to heaven, I wish I could get my mother-in-law to eat it!",
+      "author": "Paul McVites",
+      "date": "2014-09-05T17:57:28.556094Z"
+    },
+    {
+      "id": 12,
+      "dishId": 2,
+      "rating": 3,
+      "comment": "Eat it, just eat it!",
+      "author": "Michael Jaikishan",
+      "date": "2015-02-13T17:57:28.556094Z"
+    },
+    {
+      "id": 13,
+      "dishId": 2,
+      "rating": 4,
+      "comment": "Ultimate, Reaching for the stars!",
+      "author": "Ringo Starry",
+      "date": "2013-12-02T17:57:28.556094Z"
+    },
+    {
+      "id": 14,
+      "dishId": 2,
+      "rating": 2,
+      "comment": "It's your birthday, we're gonna party!",
+      "author": "25 Cent",
+      "date": "2011-12-02T17:57:28.556094Z"
+    },
+    {
+      "id": 15,
+      "dishId": 3,
+      "rating": 5,
+      "comment": "Imagine all the eatables, living in conFusion!",
+      "author": "John Lemon",
+      "date": "2012-10-16T17:57:28.556094Z"
+    },
+    {
+      "id": 16,
+      "dishId": 3,
+      "rating": 4,
+      "comment": "Sends anyone to heaven, I wish I could get my mother-in-law to eat it!",
+      "author": "Paul McVites",
+      "date": "2014-09-05T17:57:28.556094Z"
+    },
+    {
+      "id": 17,
+      "dishId": 3,
+      "rating": 3,
+      "comment": "Eat it, just eat it!",
+      "author": "Michael Jaikishan",
+      "date": "2015-02-13T17:57:28.556094Z"
+    },
+    {
+      "id": 18,
+      "dishId": 3,
+      "rating": 4,
+      "comment": "Ultimate, Reaching for the stars!",
+      "author": "Ringo Starry",
+      "date": "2013-12-02T17:57:28.556094Z"
+    },
+    {
+      "id": 19,
+      "dishId": 3,
+      "rating": 2,
+      "comment": "It's your birthday, we're gonna party!",
+      "author": "25 Cent",
+      "date": "2011-12-02T17:57:28.556094Z"
+    },
+    {
+      "dishId": 1,
+      "rating": "4",
+      "author": "George Hairyson",
+      "comment": "This is freaking awesome!",
+      "date": "2021-02-20T16:23:32.632Z",
+      "id": 20
+    },
+    {
+      "dishId": 1,
+      "rating": "5",
+      "author": "George",
+      "comment": "This is awesome!",
+      "date": "2021-03-20T16:23:32.632Z",
+      "id": 21
+    },
+    {
+      "date": "2021-04-24T08:15:10.497Z",
+      "id": 41
+    },
+    {
+      "dishId": 2,
+      "rating": "4",
+      "author": "fhfgh",
+      "comment": "do",
+      "date": "2021-04-24T14:26:56.601Z",
+      "id": 48
+    },
+    {
+      "rating": "3",
+      "author": "Khanh",
+      "comment": "yo",
+      "commentId": 57,
+      "date": "2021-04-26T03:39:17.725Z",
+      "id": 57
+    },
+    {
+      "dishId": 1,
+      "rating": "3",
+      "author": "Khanh",
+      "comment": "luv",
+      "date": "2021-04-26T03:41:44.870Z",
+      "id": 58
+    },
+    {
+      "author": "Khanh",
+      "comment": "dont",
+      "id": 61,
+      "date": "2021-04-26T04:17:51.029Z"
+    },
+    {
+      "dishId": 0,
+      "rating": "3",
+      "author": "Khanh",
+      "comment": "welcome 22222",
+      "date": "2021-04-26T09:08:50.366Z",
+      "id": 62
+    },
+    {
+      "dishId": 0,
+      "rating": "3",
+      "author": "this is my name",
+      "comment": "fytgu 2",
+      "date": "2021-04-26T09:54:15.912Z",
+      "id": 64
+    },
+    {
+      "dishId": 0,
+      "rating": "2",
+      "author": "okkk",
+      "comment": "hello1111111111",
+      "date": "2021-04-26T10:38:35.017Z",
+      "id": 65
+    },
+    {
+      "dishId": 0,
+      "rating": "4",
+      "author": "okkk",
+      "comment": "loud",
+      "date": "2021-04-27T04:03:30.714Z",
+      "id": 67
+    },
+    {
+      "dishId": 0,
+      "rating": "4",
+      "author": "okkk",
+      "comment": "okayyyyy",
+      "date": "2021-04-27T04:39:54.006Z",
+      "id": 68
+    }
+  ],
+  "promotions": [
+    {
+      "id": 0,
+      "name": "Weekend Grand Buffet",
+      "image": "https://i.ibb.co/tBthQ2x/buffet.jpg",
+      "label": "New",
+      "price": "19.99",
+      "featured": true,
+      "description": "Featuring mouthwatering combinations with a choice of five different salads, six enticing appetizers, six main entrees and five choicest desserts. Free flowing bubbly and soft drinks. All for just $19.99 per person "
+    }
+  ],
+  "leaders": [
+    {
+      "id": 0,
+      "name": "Peter Pan",
+      "image": "https://i.ibb.co/pPz0xZK/photographer-resume-3-1.jpg",
+      "designation": "Chief Epicurious Officer",
+      "abbr": "CEO",
+      "featured": false,
+      "description": "Our CEO, Peter, credits his hardworking East Asian immigrant parents who undertook the arduous journey to the shores of America with the intention of giving their children the best future. His mother's wizardy in the kitchen whipping up the tastiest dishes with whatever is available inexpensively at the supermarket, was his first inspiration to create the fusion cuisines for which The Frying Pan became well known. He brings his zeal for fusion cuisines to this restaurant, pioneering cross-cultural culinary connections."
+    },
+    {
+      "id": 1,
+      "name": "Dhanasekaran Witherspoon",
+      "image": "https://i.ibb.co/pPz0xZK/photographer-resume-3-1.jpg",
+      "designation": "Chief Food Officer",
+      "abbr": "CFO",
+      "featured": false,
+      "description": "Our CFO, Danny, as he is affectionately referred to by his colleagues, comes from a long established family tradition in farming and produce. His experiences growing up on a farm in the Australian outback gave him great appreciation for varieties of food sources. As he puts it in his own words, Everything that runs, wins, and everything that stays, pays!"
+    },
+    {
+      "id": 2,
+      "name": "Agumbe Tang",
+      "image": "https://i.ibb.co/pPz0xZK/photographer-resume-3-1.jpg",
+      "designation": "Chief Taste Officer",
+      "abbr": "CTO",
+      "featured": false,
+      "description": "Blessed with the most discerning gustatory sense, Agumbe, our CFO, personally ensures that every dish that we serve meets his exacting tastes. Our chefs dread the tongue lashing that ensues if their dish does not meet his exacting standards. He lives by his motto, You click only if you survive my lick."
+    },
+    {
+      "id": 3,
+      "name": "Alberto Somayya",
+      "image": "https://cdn-images.zety.com/pages/photographer_resume_3.jpg",
+      "designation": "Executive Chef",
+      "abbr": "EC",
+      "featured": true,
+      "description": "Award winning three-star Michelin chef with wide International experience having worked closely with whos-who in the culinary world, he specializes in creating mouthwatering Indo-Italian fusion. "
+    }
+  ],
+  "feedback": [
+    {
+      "firstname": "fdas",
+      "lastname": "afds",
+      "telnum": "134113",
+      "email": "dafdads@daffas.dfdafd",
+      "agree": true,
+      "contactType": "Email",
+      "message": "afadsfds",
+      "date": "2017-12-04T09:41:49.890Z",
+      "id": 1
+    },
+    {
+      "firstname": "khanh",
+      "lastname": "Hong",
+      "telnum": "0437976",
+      "email": "hong.nkhanh@gmail.com",
+      "agree": true,
+      "contactType": "Tel.",
+      "message": "123",
+      "date": "2021-03-04T12:19:43.064Z",
+      "id": 2
+    }
+  ]
+}
