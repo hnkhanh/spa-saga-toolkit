@@ -1,10 +1,12 @@
 import {
-  combineReducers, configureStore, getDefaultMiddleware
+  combineReducers,
+  configureStore,
+  getDefaultMiddleware,
 } from "@reduxjs/toolkit";
-import { createForms } from 'react-redux-form';
-import logger from 'redux-logger';
+import { createForms } from "react-redux-form";
+import logger from "redux-logger";
 import createSagaMiddleware from "redux-saga";
-import { InitialFeedback } from '../forms';
+import { InitialFeedback } from "../forms";
 import commentsReducer from "../reducers/comments";
 import dishesReducer from "../reducers/dishes";
 import leadersReducer from "../reducers/leaders";
@@ -19,18 +21,23 @@ const reducer = combineReducers({
   comments: commentsReducer,
   promotions: promotionsReducer,
   ...createForms({
-    feedback: InitialFeedback
+    feedback: InitialFeedback,
   }),
 });
 
 const store = configureStore({
   reducer,
-  middleware: [...getDefaultMiddleware(), sagaMiddleware, logger]
+  middleware: [...getDefaultMiddleware(), sagaMiddleware, logger],
 });
 
 sagaMiddleware.run(rootSaga);
 
-export default store
+// Infer the `RootState` and `AppDispatch` types from the store itself
+export type RootState = ReturnType<typeof store.getState>;
+// Inferred type: {posts: PostsState, comments: CommentsState, users: UsersState}
+export type AppDispatch = typeof store.dispatch;
+
+export default store;
 
 // configure redux store
 // export const ConfigureStore = () => {
@@ -44,7 +51,7 @@ export default store
 //                 feedback: InitialFeedback
 //             }),
 //         }),
-//         applyMiddleware(thunk, logger),        
+//         applyMiddleware(thunk, logger),
 //     );
 //     return store;
 // }

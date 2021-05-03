@@ -45,8 +45,8 @@
     {
       "id": 5,
       "dishId": 1,
-      "rating": 5,
-      "comment": "Imagine all the eatables, living in conFusion!",
+      "rating": "3",
+      "comment": "Imagine all the eatables, living in conFusion baby!",
       "author": "John Lemon",
       "date": "2012-10-16T17:57:28.556094Z"
     },
@@ -214,35 +214,35 @@
     },
     {
       "dishId": 0,
-      "rating": "3",
+      "rating": "4",
       "author": "Khanh",
-      "comment": "welcome ",
+      "comment": "your welcome ",
       "date": "2021-04-26T09:08:50.366Z",
       "id": 62
     },
     {
       "dishId": 0,
-      "rating": "2",
-      "author": "okkk",
-      "comment": "hello1111111111",
-      "date": "2021-04-26T10:38:35.017Z",
-      "id": 65
-    },
-    {
-      "dishId": 0,
       "rating": "4",
       "author": "okkk",
-      "comment": "loud",
+      "comment": "supter loud",
       "date": "2021-04-27T04:03:30.714Z",
       "id": 67
     },
     {
       "dishId": 0,
+      "rating": "3",
+      "author": "wikipedia",
+      "comment": "itssa me",
+      "date": "2021-04-30T16:39:24.769Z",
+      "id": 69
+    },
+    {
+      "dishId": 0,
       "rating": "4",
-      "author": "okkk",
-      "comment": "okayyyyy",
-      "date": "2021-04-27T04:39:54.006Z",
-      "id": 68
+      "author": "hồng phụ vũ",
+      "comment": "okay are we doing this now",
+      "date": "2021-05-02T10:03:30.012Z",
+      "id": 70
     }
   ],
   "promotions": [
