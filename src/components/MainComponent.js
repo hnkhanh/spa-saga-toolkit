@@ -68,12 +68,13 @@ const Main = (props) => {
 
   const DishWithId = () => {
     const { dishId } = useParams();
+    // console.log(typeof dishId)
     return(
       <DishDetail 
-        dish={dishes.dishes.filter((dish) => dish.id === parseInt(dishId,10))[0]} 
+        dish={dishes.dishes.filter(dish => dish.id === Number(dishId))[0]} 
         isLoading={dishes.isLoading}
         errMess={dishes.errMess}
-        comments={comments.comments.filter((comment) => comment.dishId === parseInt(dishId,10))}
+        comments={comments.comments.filter(comment => comment.dishId === Number(dishId))}
         commentsErrMess = {comments.errMess}
       />
     );

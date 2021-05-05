@@ -7,8 +7,7 @@ import { Loading } from './LoadingComponent';
 import { required, maxLength, minLength } from "./ContactComponent";
 import { FadeTransform } from 'react-animation-components';
 import { useDispatch } from 'react-redux';
-import { addComment, deleteComment, updateComment } from '../redux/reducers/comments'
-
+import { addComment, deleteComment, updateComment } from '../redux/reducers/comments';
 const CommentForm = ({ dishId }) => {
   const dispatch = useDispatch();
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -63,7 +62,7 @@ const UpdateCommentForm = ({comment}) => {
       />
       <Button outline 
         onClick={toggleModalUpdate}
-        className="mt-3 mb-3 comment"
+        className="mb-3 comment"
         >
         Update Comment
       </Button>
@@ -78,7 +77,9 @@ const UpdateFormModal = ({isModalUpdateOpen, toggleModalUpdate, handleSubmit, co
         <ModalHeader toggle={toggleModalUpdate}>Update Comment</ModalHeader>
         <ModalBody>
           <LocalForm onSubmit={ handleSubmit }>
-          <Row className="form-group" style={{display: 'none'}}>
+          <Row className="form-group" 
+          style={{display: 'none'}}
+          >
             <Label htmlFor="id" md={12} >Id
             </Label>
             <Col>
@@ -93,6 +94,7 @@ const UpdateFormModal = ({isModalUpdateOpen, toggleModalUpdate, handleSubmit, co
             </Label>
             <Col>
                   <Control.select model=".rating" name="rating"
+                  defaultValue = {comment.rating}
                       className="form-control">
                       <option>1</option>
                       <option>2</option>
@@ -235,7 +237,7 @@ const RenderComments = ({comments, errMess}) => {
   if (errMess) return <h4>{errMess}</h4>;
   else {
     let options = { year: "numeric", month: "short", day: "2-digit" };
-    // console.log("why render me")
+    console.log("why render me")
     return (
       <div> 
 
@@ -244,6 +246,7 @@ const RenderComments = ({comments, errMess}) => {
           return (
             <div key={comment.id} className="list-unstyled">
             <p className="mb-2" >{comment.comment}</p>
+            <span className="mb-2" >{comment.rating} stars</span>
             <p>
               -- {comment.author}
               {", "}
@@ -251,14 +254,12 @@ const RenderComments = ({comments, errMess}) => {
             </p>
             <Button outline 
             onClick={() => dispatch(deleteComment(comment.id))} 
-            className="mt-3 mb-3 comment"
+            className=" mb-3 comment"
             >
             Delete Comment
             </Button>
             <UpdateCommentForm 
               comment = {comment}
-              className= "update-comment"
-              // className="mt-3 mb-3 comment"
             />
             
           </div>
@@ -305,7 +306,7 @@ const DishDetail = ({ dish, comments, isLoading, commentsErrMess, errMess }) => 
   const onPageChange = (e) => {
     setCurrentPage(Number(e.target.id))
     }
-console.log("rerender")
+
   if (isLoading) {
     return(
       <div className="container">
@@ -325,7 +326,6 @@ console.log("rerender")
     );
   }
   else if (dish != null) {
-    console.log("inside rerender")
     return(
       <div className="container">
         <div className="row">
